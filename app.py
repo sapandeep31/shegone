@@ -6,13 +6,10 @@ import google.generativeai as genai
 import os
 
 app = Flask(__name__, static_url_path='/static')
-app.secret_key = os.environ.get('SECRET_KEY', 'supersecretkey')
+app.secret_key = 'supersecretkey'  
 
-
-api_key = os.getenv("API_KEY")
-
-# Configure genai with the API key
-genai.configure(api_key=api_key)
+# Initialize the Gemini model
+genai.configure(api_key="AIzaSyC7WPuNSB1dgyHyd_XuU8mfaQ-3_rn4ji4")
 model = genai.GenerativeModel('models/gemini-1.5-flash')
 
 @app.route('/')
@@ -94,6 +91,3 @@ def process_audio():
 def reset_conversation():
     session.pop('conversation_history', None)
     return jsonify({'message': 'Conversation history reset'})
-
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5000)))
