@@ -6,7 +6,7 @@ import google.generativeai as genai
 import os
 
 app = Flask(__name__, static_url_path='/static')
-app.secret_key = 'supersecretkey'  
+app.secret_key = os.environ.get('SECRET_KEY', 'supersecretkey')
 
 # Initialize the Gemini model
 genai.configure(api_key="AIzaSyC7WPuNSB1dgyHyd_XuU8mfaQ-3_rn4ji4")
@@ -93,4 +93,4 @@ def reset_conversation():
     return jsonify({'message': 'Conversation history reset'})
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5000)))
