@@ -93,11 +93,3 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 - Special thanks to the contributors of this project for their valuable input.
 
 ```
-
-### Notes:
-- Replace `your-username` in the clone command with your actual GitHub username.
-- Make sure to create a `requirements.txt` file with the necessary dependencies for the project.
-- Update the `YOUR_API_KEY_HERE` placeholder with instructions on how to set up the API key for the Gemini model.
-- Add a LICENSE file if you want to include licensing information.
-
-Feel free to modify any section to better fit your project's needs!
