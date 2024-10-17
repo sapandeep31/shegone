@@ -9,7 +9,7 @@ app = Flask(__name__, static_url_path='/static')
 app.secret_key = os.environ.get('SECRET_KEY', 'supersecretkey')
 
 # Initialize the Gemini model
-genai.configure(api_key="AIzaSyC7WPuNSB1dgyHyd_XuU8mfaQ-3_rn4ji4")
+genai.configure(api_key="API_KEY")
 model = genai.GenerativeModel('models/gemini-1.5-flash')
 
 @app.route('/')
