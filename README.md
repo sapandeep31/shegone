@@ -1,5 +1,7 @@
 # Therapy-SAP
 
+You can directly access live web service at: https://she-is-gone-and-never-coming-back-latest.onrender.com/
+
 Therapy-SAP is a web application that simulates a conversation with a cognitive-behavioral therapist using artificial intelligence. The app processes audio input from users, generates conversational responses, and converts them to speech using text-to-speech (TTS) technology. It is designed to help users explore their thoughts and feelings in a structured and supportive manner.
 
 ## Features
