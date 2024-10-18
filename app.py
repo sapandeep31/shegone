@@ -1,9 +1,7 @@
 from flask import Flask, render_template, request, jsonify, send_file, session
 from gtts import gTTS
-from pydub import AudioSegment
 import pathlib
 import google.generativeai as genai
-import os
 
 app = Flask(__name__, static_url_path='/static')
 app.secret_key = 'supersecretkey'  
