@@ -91,3 +91,6 @@ def process_audio():
 def reset_conversation():
     session.pop('conversation_history', None)
     return jsonify({'message': 'Conversation history reset'})
+
+if __name__ == '__main__':
+    app.run(debug=True)
